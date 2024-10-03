@@ -1,0 +1,51 @@
+#include <stdio.h>
+
+int main() {
+    float pesot, pesoPlaneta;
+    int planeta;
+
+    printf("Insira o peso no planeta Terra: ");
+    scanf("%f", &pesot);
+
+    printf("Escolha um planeta:\n");
+    printf("1 - Mercúrio\n");
+    printf("2 - Vênus\n");
+    printf("3 - Marte\n");
+    printf("4 - Júpiter\n");
+    printf("5 - Saturno\n");
+    printf("6 - Urano\n");
+    printf("Digite o número do planeta: ");
+    scanf("%d", &planeta);
+
+    switch (planeta) {
+        case 1: 
+            pesoPlaneta = (pesot / 10) * 0.37;
+            printf("Peso no planeta Mercúrio: %.2f\n", pesoPlaneta);
+            break;
+        case 2: 
+            pesoPlaneta = (pesot / 10) * 0.88;
+            printf("Peso no planeta Vênus: %.2f\n", pesoPlaneta);
+            break;
+        case 3: 
+            pesoPlaneta = (pesot / 10) * 0.38;
+            printf("Peso no planeta Marte: %.2f\n", pesoPlaneta);
+            break;
+        case 4: 
+            pesoPlaneta = (pesot / 10) * 2.64;
+            printf("Peso no planeta Júpiter: %.2f\n", pesoPlaneta);
+            break;
+        case 5: 
+            pesoPlaneta = (pesot / 10) * 1.15;
+            printf("Peso no planeta Saturno: %.2f\n", pesoPlaneta);
+            break;
+        case 6: 
+            pesoPlaneta = (pesot / 10) * 1.17;
+            printf("Peso no planeta Urano: %.2f\n", pesoPlaneta);
+            break;
+        default:
+            printf("Planeta não reconhecido.\n");
+            break;
+    }
+
+
+}
