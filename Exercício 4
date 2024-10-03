@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int main(){
+
+    int x, y;
+    float ma, mp, resto;
+    char opc;
+
+    printf("Insira um valor para X e para Y, respectivamente: ");
+    scanf("%d %d", &x, &y);
+
+    printf("insira uma das opções(A, P ou R): ");
+    scanf(" %c", &opc);
+
+    switch (opc){
+        case 'A': 
+            ma = (x + y) / 2;
+            printf("Média aritmética: %.2f", ma);
+            break;
+        case 'P': 
+            mp = ((x * 4) + (y * 6)) / 10;
+            printf("Média ponderada: %.2f", mp);
+            break;
+        case 'R':
+            resto = y % x;
+            printf("Resto da divisão de %d e %d é %.2f", y, x, resto);
+            break;
+        default: 
+            printf("opção inválida");
+    }
+
+}
