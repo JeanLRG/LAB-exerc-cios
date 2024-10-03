@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main(){
+
+    char plano;
+    float salarioatual, salarionovo;
+
+    printf("Insira o salário atual: ");
+    scanf("%f", &salarioatual);
+    printf("Insira o plano (A, B ou C): ");
+    scanf(" %c", &plano);
+
+    switch (plano){
+        case 'A': 
+            salarionovo = salarioatual * 1.09;
+            printf("Novo salário com 9%% aumento: R$%.2f", salarionovo);
+            break;
+        case 'B': 
+            salarionovo = salarioatual * 1.13;
+            printf("Novo salário com 13%% aumento: R$%.2f", salarionovo);
+            break;
+        case 'C': 
+            salarionovo = salarioatual * 1.17;
+            printf("Novo salário com 17%% aumento: R$%.2f", salarionovo);
+            break;
+        default: 
+            printf("Plano inválido");
+    }
+
+}
