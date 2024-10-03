@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main(){
+
+    char opc;
+    int altura;
+    float pesoideal;
+
+    printf("Qual seu sexo(M para masculino e F para feminino)? ");
+    scanf("%c", &opc);
+    printf("Qual sua altura: ");
+    scanf("%d", &altura);
+
+    switch (opc){
+        case 'M': 
+            pesoideal =(altura - 100) * 0.9;
+            printf("Peso ideal: %.1fKg", pesoideal);
+            break;
+        case 'F':
+            pesoideal =(altura - 100) * 0.85;
+            printf("Peso ideal: %.1fKg", pesoideal);
+            break;
+        default: 
+            printf("Identificação inválida");
+    }
+
+}
