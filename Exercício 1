@@ -1,0 +1,55 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(){
+
+    int i;
+    float a, b, c, maior, menor, meio;
+    maior = 0;
+    menor = 10;
+    meio = 
+
+
+    printf("insira um número inteiro positivo: ");
+    scanf("%d", &i);  
+    printf("insira um número real: ");
+    scanf("%f", &a);
+    printf("insira um número real: ");
+    scanf("%f", &b);
+    printf("insira um número real: ");
+    scanf("%f", &c);
+
+
+    if (a > b && b > c){
+        maior = a;
+        meio = b;
+        menor = c;
+    }else if (a > b && b < c){
+        maior = a;
+        meio = c;
+        menor = b;
+    }else if (a > b && a < c){
+        maior = c;
+        meio = a;
+        menor = b;
+    }else if (a < b && b < c){
+        maior = c;
+        meio = b;
+        menor = a;
+    }else if (a > b && a < c ){
+        maior = c;
+        meio = a;
+        menor = b;
+    }
+
+    switch (i) {
+        case 1: printf("%f %f %f", menor, meio, maior);
+                break;
+        case 2: printf("%f %f %f", maior, meio, menor);
+                break;
+        case 3: printf("%f %f %f ou %f %f %f", menor, maior, meio, meio, maior, menor);
+                break;
+        default: printf("Número inválido");
+    }
+
+}
