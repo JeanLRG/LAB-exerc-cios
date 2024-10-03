@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+int main() {
+    float a, b, soma, sub, multi, div;
+    char caractere;
+
+    printf("Insira dois valores: ");
+    scanf("%f %f", &a, &b);
+    printf("Insira um caractere para representar a operação (+, -, *, /): ");
+    scanf(" %c", &caractere); 
+
+    switch (caractere) {
+        case '+': 
+            soma = a + b;
+            printf("%.2f + %.2f = %.2f\n", a, b, soma);
+            break;
+        case '-': 
+            sub = a - b;
+            printf("%.2f - %.2f = %.2f\n", a, b, sub);
+            break;
+        case '*': 
+            multi = a * b;
+            printf("%.2f * %.2f = %.2f\n", a, b, multi);
+            break;
+        case '/':
+            if (b != 0) {
+                div = a / b;
+                printf("%.2f / %.2f = %.2f\n", a, b, div);
+            } else {
+                printf("Operação inválida! Divisão por zero.\n");
+            }
+            break;         
+        default:
+            printf("Caractere inválido!\n");
+    }
+
+    return 0; 
+}
